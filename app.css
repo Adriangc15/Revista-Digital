@@ -1,0 +1,14 @@
+.noticia-css {
+    background-color: rgba(51, 170, 51, .5);
+    box-shadow: 3px 3px 2px grey;
+    border: 1ex;
+    border-style: inset;
+    margin-right: 10px; 
+}
+
+.description-css {
+    display: inline-block;
+    height: 80px;
+    line-height: 20px;
+    overflow: hidden;
+}
