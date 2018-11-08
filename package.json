@@ -1,0 +1,23 @@
+{
+  "name": "revista-digital",
+  "version": "1.0.0",
+  "description": "Proyecto de Revista Digital UAM",
+  "main": "app.js",
+  "dependencies": {
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adriangc15/Revista-Digital.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adriangc15/Revista-Digital/issues"
+  },
+  "homepage": "https://github.com/Adriangc15/Revista-Digital#readme"
+}
