@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi Revista</title>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="./JavaScript/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./JavaScript/bootstrap.min.js"></script>
+
+
+    <!-- Links to the CSS files -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/app.css">
+</head>
+
+<body>
+    <!-- Begin of Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Mi Revista</a>
+        </div>
+    </nav>
+
+    <!-- Begin of headers of the screen -->
+    <div class="container" id="app">
+        <div class="row jumbotron">
+            <h1 class="display-4">Mi proyecto de revista!</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ratione ullam..</p>
+            <hr class="my-4">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur incidunt assumenda nisi, aspernatur
+                excepturi voluptatem..</p>
+        </div>
+
+        <!-- Loop to display each new on news list -->
+        <div class="row">
+            <div v-for="noticia in noticias" class="col-3 noticia-css">
+                <label>
+                    <a data-target="#modalNoticia" data-toggle="modal" href="#" class="titulo-noticia" @click="noticiaSet(noticia)">
+                        <strong v-text="noticia.titulo">
+                        </strong>
+                    </a>
+                </label>
+                <p><i v-text="noticia.descripcion" class="description-css"></i></p>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalNoticia" role="dialog" v-cloak>
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" v-text="noticiaActual.titulo"></h1>
+                    </div>
+                    <div class="modal-body">
+                        <p v-html="noticiaActual.cuerpo"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="./JavaScript/app.js"></script>
+</body>
+
+</html>
