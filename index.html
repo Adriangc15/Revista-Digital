@@ -29,11 +29,16 @@
     <!-- Begin of headers of the screen -->
     <div class="container" id="app">
         <div class="row jumbotron">
-            <h1 class="display-4">Mi proyecto de revista!</h1>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ratione ullam..</p>
+            <h1 class=" text-center display-4">Mi proyecto de revista!</h1>
             <hr class="my-4">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur incidunt assumenda nisi, aspernatur
-                excepturi voluptatem..</p>
+            <p><ul>
+                <li>Mariana Hernandez</li>
+                <li>Alejandra Benavides</li>
+                <li>Kimberly Herrera</li>
+                <li>Roger Ramirez</li>
+                <li>Andres Cespedes</li>
+                <li>Jennifer Vega</li>
+            </ul></p>
         </div>
 
         <!-- Loop to display each new on news list -->
@@ -59,7 +64,13 @@
                         <h1 class="modal-title" v-text="noticiaActual.titulo"></h1>
                     </div>
                     <div class="modal-body">
-                        <p v-html="noticiaActual.cuerpo"></p>
+                        <p class="text-justify" v-html="noticiaActual.cuerpo"></p>
+                        <a :href="noticiaActual.link" target="_blank">Link a la noticia</a>
+                        <br>
+                        <br>
+                        <h6>Análisis.</h6>
+                        <br>
+                        <p class="text-justify" v-html="noticiaActual.analisis"></p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -68,7 +79,7 @@
 
             </div>
         </div>
-
+        
     </div>
     <script src="./JavaScript/app.js"></script>
 </body>
