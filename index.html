@@ -31,14 +31,16 @@
         <div class="row jumbotron">
             <h1 class=" text-center display-4">Mi proyecto de revista!</h1>
             <hr class="my-4">
-            <p><ul>
-                <li>Mariana Hernandez</li>
-                <li>Alejandra Benavides</li>
-                <li>Kimberly Herrera</li>
-                <li>Roger Ramirez</li>
-                <li>Andres Cespedes</li>
-                <li>Jennifer Vega</li>
-            </ul></p>
+            <p>
+                <ul>
+                    <li>Mariana Hernandez</li>
+                    <li>Alejandra Benavides</li>
+                    <li>Kimberly Herrera</li>
+                    <li>Roger Ramirez</li>
+                    <li>Andres Cespedes</li>
+                    <li>Jennifer Vega</li>
+                </ul>
+            </p>
         </div>
 
         <!-- Loop to display each new on news list -->
@@ -64,6 +66,7 @@
                         <h1 class="modal-title" v-text="noticiaActual.titulo"></h1>
                     </div>
                     <div class="modal-body">
+                        <img class="rounded mx-auto d-block" style="width: 400px;" :src="noticiaActual.imagen">
                         <p class="text-justify" v-html="noticiaActual.cuerpo"></p>
                         <a :href="noticiaActual.link" target="_blank">Link a la noticia</a>
                         <br>
